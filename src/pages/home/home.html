@@ -1,0 +1,22 @@
+
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title >
+      Meetup Ionic Pernambuco
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ <ion-item>
+  <ion-label>Lampada 1 </ion-label>
+  <ion-toggle [(ngModel)]="lamp" checked="{{ lamp }}" (ionChange)="updateLampada(lamp)"></ion-toggle>
+</ion-item>
+
+  <ion-item>
+ <h3>Quantidade de acionamentos: <strong>{{log | async | json }}</strong></h3>
+ </ion-item>
+
+
+</ion-content>
